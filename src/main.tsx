@@ -1,26 +1,34 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
-import App from './App'
 import './index.css'
 import About from './pages/About';
 import MainLayout from './layouts/MainLayout';
+import HomePage from './pages/HomePage';
+import AuthLayout from './layouts/AuthLayout';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+   
     element: <MainLayout/>,
     children : [
       {
         path: "/",
-        element: <MainLayout/>,
+        element: <HomePage/>,
+      },
+      {
+        path: "about",
+        element: <About/>,
       }
     ]
   },
-  {
-    path: "/about",
-    element: <About />,
-  },
+   {
+    element: <AuthLayout/>,        
+   },
+  // {
+  //   path: "/about",
+  //   element: <About />,
+  // },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
