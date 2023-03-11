@@ -6,15 +6,22 @@ import MainLayout from './layouts/MainLayout';
 import HomePage from './pages/HomePage';
 import AuthLayout from './layouts/AuthLayout';
 import Login from './pages/Login';
+import Error from './pages/Error';
+import Menu from './pages/Menu';
 
 const router = createBrowserRouter([
   {
    
     element: <MainLayout/>,
+    errorElement: <Error/>,
     children : [
       {
         path: "/",
         element: <HomePage/>,
+      },
+      {
+        path: "menu",
+        element: <Menu/>,
       },
      
     ]
