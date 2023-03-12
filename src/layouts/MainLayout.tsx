@@ -12,7 +12,7 @@ const MainLayout = () => {
         </ul>
       </aside>
       <main className='w-3/4'>
-         <Outlet />
+        <Outlet />
       </main>
     </div>
   )
