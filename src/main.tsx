@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import {createBrowserRouter, RouterProvider} from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css'
 import MainLayout from './layouts/MainLayout';
 import HomePage from './pages/HomePage';
@@ -11,30 +11,30 @@ import Menu from './pages/Menu';
 
 const router = createBrowserRouter([
   {
-   
-    element: <MainLayout/>,
-    errorElement: <Error/>,
-    children : [
+
+    element: <MainLayout />,
+    errorElement: <Error />,
+    children: [
       {
         path: "/",
-        element: <HomePage/>,
+        element: <HomePage />,
       },
       {
         path: "menu",
-        element: <Menu/>,
+        element: <Menu />,
       },
-     
+
     ]
   },
-   {
-    element: <AuthLayout/>,   
-    children : [
+  {
+    element: <AuthLayout />,
+    children: [
       {
         path: "login",
-        element: <Login/>,
-      }, 
-    ]    
-   },
+        element: <Login />,
+      },
+    ]
+  },
   // {
   //   path: "/about",
   //   element: <About />,
@@ -43,6 +43,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-   <RouterProvider router={router} />
+    <RouterProvider router={router} />
   </React.StrictMode>,
 )
